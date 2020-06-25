@@ -1,0 +1,1111 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title></title>
+    <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+    <link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d095cfb784b9e78ba026995fb276ffa26d6d726d/spark/css/spark-style.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+  <div class="vheader">
+    <div class="nav-logo">
+      <a href="#">
+        <div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+      </a>
+    </div>
+    <ul class="nav-left">
+      <li class="search-box">
+        <a class="search-toggle" href="#">
+          <i class="search-icon fa fa-search"></i>
+          <i class="search-icon-close fa fa-close"></i>
+        </a>
+      </li>
+      <li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+    </ul>
+    <ul class="nav-right">
+      <li class="m-r-10">
+        <a href="#"><span class="badge badge-primary"></span></a>
+      </li>
+        <li class="m-r-10">
+          <a href="#"><span class="badge badge-primary">Jun 25, 2020 01:32:46 PM</span></a>
+        </li>
+    </ul>
+  </div>
+</div><div class="side-nav">
+  <div class="side-nav-inner">
+    <ul class="side-nav-menu">
+          	  <li class="nav-item dropdown" onclick="toggleView('test-view')">
+            <a id="nav-test" class="dropdown-toggle" href="#">
+              <span class="ico"><i class="fa fa-list"></i></span>
+            </a>
+          </li>
+    	  <li class="nav-item dropdown" onclick="toggleView('category-view')">
+            <a id="nav-category" class="dropdown-toggle" href="#">
+              <span class="ico"><i class="fa fa-tag"></i></span>
+            </a>
+          </li>
+    	  <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+            <a id="nav-dashboard" class="dropdown-toggle" href="#">
+              <span class="ico"><i class="fa fa-bar-chart"></i></span>
+            </a>
+          </li>
+    </ul>
+  </div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+      <ul class="tools pull-left">
+        <li><a href="#"><span class="font-size-14">Tests</span></a></li>
+      </ul>
+      <ul class="tools text-right">
+        <li class="user-profile dropdown dropdown-animated scale-left">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+          <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+            <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+            <a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+            
+            
+            
+            <a class="dropdown-item" status="skip" href="#"><span>Skip</span><span class="status warning"></span></a>
+            <div class="dropdown-divider"></div>
+            <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+          </ul>
+        </li>
+        <li class="user-profile dropdown dropdown-animated scale-left">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+          <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+            <a class="dropdown-item" href="#">@skipscenario</a>
+            <a class="dropdown-item" href="#">@calc</a>
+            <a class="dropdown-item" href="#">@shop</a>
+            <a class="dropdown-item" href="#">@website</a>
+            <a class="dropdown-item" href="#">@foo</a>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag="@foo"
+          device="">
+          <div class="status-avatar fail-bg">
+            <i class="fa fa-times text-white"></i>
+          </div>
+          <div class="test-detail">
+            <span class="meta text-white badge badge-sm"></span>
+            <p class="name">Basic Arithmetic</p>
+            <p class="text-sm"><span>13:32:47 PM</span> / <span>0.157 secs</span></p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="detail-head">
+              <div class="p-v-10 d-inline-block">
+                <div class="info">
+                  <h5 class="test-status text-fail">Basic Arithmetic</h5>
+                  <span class='badge badge-success'>06.25.2020 13:32:47</span>
+                  <span class='badge badge-danger'>06.25.2020 13:32:47</span>
+                  <span class='badge badge-default'>0.157 secs</span>
+                </div>
+                <div class="m-t-15">      <span class="badge badge-pill badge-default"> @foo</span>
+</div>
+              </div>
+            </div>
+
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node"><span class="badge log pass-bg mr-2">Pass</span>Addition Scenario hehe</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="cucumber.examples.java.calculator.RpnCalculatorStepdefs.a_calculator_I_just_turned_on()">
+                <span>Given a calculator I just turned on</span>
+              </div>
+
+              <div class="step pass-bg" title="cucumber.examples.java.calculator.RpnCalculatorStepdefs.adding(int,int)">
+                <span>When I add 4 and 5</span>
+              </div>
+
+              <div class="step pass-bg" title="cucumber.examples.java.calculator.RpnCalculatorStepdefs.the_result_is(double)">
+                <span>Then the result is 9</span>
+              </div>
+
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node"><span class="badge log pass-bg mr-2">Pass</span>Another Addition</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="cucumber.examples.java.calculator.RpnCalculatorStepdefs.a_calculator_I_just_turned_on()">
+                <span>Given a calculator I just turned on</span>
+              </div>
+
+              <div class="step pass-bg" title="cucumber.examples.java.calculator.RpnCalculatorStepdefs.adding(int,int)">
+                <span>When I add 4 and 7</span>
+              </div>
+
+              <div class="step pass-bg" title="cucumber.examples.java.calculator.RpnCalculatorStepdefs.the_result_is(double)">
+                <span>Then the result is 11</span>
+              </div>
+
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node"><span class="badge log fail-bg mr-2">Fail</span>Many additions</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node"><span class="badge log fail-bg mr-2">Fail</span>Many additions</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given a calculator I just turned on</span>
+
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given the previous entries:</span>
+<table class='markup-table table '><tr><td>first</td><td>second</td><td>operation</td></tr><tr><td>1</td><td>1</td><td>+</td></tr><tr><td>2</td><td>1</td><td>+</td></tr></table>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When I press "+"</span>
+
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I add 1 and 2</span>
+
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I press "+"</span>
+
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then the result is 9</span>
+        <textarea disabled class="code-block">java.lang.AssertionError: expected:<9.0> but was:<8.0>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at cucumber.examples.java.calculator.RpnCalculatorStepdefs.the_result_is(RpnCalculatorStepdefs.java:38)
+	at ?.the result is 9(classpath:cucumber/examples/java/calculator/basic_arithmetic.feature:25)
+</textarea>
+      
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And the doc string is</span>
+Hello there how r u?<br /><br />Doing great.
+Step skipped
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node"><span class="badge log pass-bg mr-2">Pass</span>Many additions</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given a calculator I just turned on</span>
+
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given the previous entries:</span>
+<table class='markup-table table '><tr><td>first</td><td>second</td><td>operation</td></tr><tr><td>1</td><td>1</td><td>+</td></tr><tr><td>2</td><td>1</td><td>+</td></tr></table>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When I press "+"</span>
+
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I add 2 and 3</span>
+
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I press "+"</span>
+
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the result is 10</span>
+
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the doc string is</span>
+Hello there how r u?<br /><br />Doing great.
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node"><span class="badge log pass-bg mr-2">Pass</span>Many additions</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given a calculator I just turned on</span>
+
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given the previous entries:</span>
+<table class='markup-table table '><tr><td>first</td><td>second</td><td>operation</td></tr><tr><td>1</td><td>1</td><td>+</td></tr><tr><td>2</td><td>1</td><td>+</td></tr></table>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When I press "+"</span>
+
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I add 10 and 20</span>
+
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I press "+"</span>
+
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the result is 35</span>
+
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the doc string is</span>
+Hello there how r u?<br /><br />Doing great.
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node"><span class="badge log pass-bg mr-2">Pass</span>Many additions</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given a calculator I just turned on</span>
+
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given the previous entries:</span>
+<table class='markup-table table '><tr><td>first</td><td>second</td><td>operation</td></tr><tr><td>1</td><td>1</td><td>+</td></tr><tr><td>2</td><td>1</td><td>+</td></tr></table>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When I press "+"</span>
+
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I add 20 and 30</span>
+
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I press "+"</span>
+
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the result is 55</span>
+
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the doc string is</span>
+Hello there how r u?<br /><br />Doing great.
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="43"
+          author=""
+          tag="@calc"
+          device="">
+          <div class="status-avatar pass-bg">
+            <i class="fa fa-check text-white"></i>
+          </div>
+          <div class="test-detail">
+            <span class="meta text-white badge badge-sm"></span>
+            <p class="name">Dates with different date formats</p>
+            <p class="text-sm"><span>13:32:47 PM</span> / <span>0 secs</span></p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="detail-head">
+              <div class="p-v-10 d-inline-block">
+                <div class="info">
+                  <h5 class="test-status text-pass">Dates with different date formats</h5>
+                  <span class='badge badge-success'>06.25.2020 13:32:47</span>
+                  <span class='badge badge-danger'>06.25.2020 13:32:47</span>
+                  <span class='badge badge-default'>0 secs</span>
+                </div>
+                <div class="m-t-15">      <span class="badge badge-pill badge-default"> @calc</span>
+</div>
+                <div class="m-t-10 m-l-5">  This feature shows you can have different date formats, as long as you annotate the
+  corresponding step definition method accordingly.</div>
+              </div>
+            </div>
+
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node"><span class="badge log pass-bg mr-2">Pass</span>Determine past date</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" >
+                <span>cucumber.examples.java.calculator.RpnCalculatorStepdefs.before(io.cucumber.java.Scenario)</span>
+              </div>
+Runs BEFORE scenarios *not* tagged with @foo
+              <div class="step pass-bg" title="cucumber.examples.java.calculator.DateStepdefs.today_is(java.util.Date)">
+                <span>Given today is 2011-01-20</span>
+              </div>
+
+              <div class="step pass-bg" title="cucumber.examples.java.calculator.DateStepdefs.I_ask_if_date_is_in_the_past(java.util.Date)">
+                <span>When I ask if Jan 19, 2011 is in the past</span>
+              </div>
+
+              <div class="step pass-bg" title="cucumber.examples.java.calculator.DateStepdefs.the_result_should_be(java.lang.String)">
+                <span>Then the result should be "yes"</span>
+              </div>
+
+              <div class="step pass-bg" >
+                <span>cucumber.examples.java.calculator.RpnCalculatorStepdefs.after(io.cucumber.java.Scenario)</span>
+              </div>
+Runs AFTER scenarios *not* tagged with @foo
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="50"
+          author=""
+          tag=""
+          device="">
+          <div class="status-avatar pass-bg">
+            <i class="fa fa-check text-white"></i>
+          </div>
+          <div class="test-detail">
+            <span class="meta text-white badge badge-sm"></span>
+            <p class="name">Scenarios feature file for screenshot</p>
+            <p class="text-sm"><span>13:32:47 PM</span> / <span>0 secs</span></p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="detail-head">
+              <div class="p-v-10 d-inline-block">
+                <div class="info">
+                  <h5 class="test-status text-pass">Scenarios feature file for screenshot</h5>
+                  <span class='badge badge-success'>06.25.2020 13:32:47</span>
+                  <span class='badge badge-danger'>06.25.2020 13:32:47</span>
+                  <span class='badge badge-default'>0 secs</span>
+                </div>
+              </div>
+            </div>
+
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node"><span class="badge log pass-bg mr-2">Pass</span>Scenario screenshot</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" >
+                <span>cucumber.examples.java.calculator.RpnCalculatorStepdefs.before(io.cucumber.java.Scenario)</span>
+              </div>
+Runs BEFORE scenarios *not* tagged with @foo
+              <div class="step pass-bg" title="cucumber.examples.java.calculator.ScreenShotStepDefinition.visitweb(java.lang.String)">
+                <span>Given Go to https://stackoverflow.com/</span>
+              </div>
+
+              <div class="step pass-bg" >
+                <span>cucumber.examples.java.calculator.ScreenShotStepDefinition.afterSite(io.cucumber.java.Scenario)</span>
+              </div>
+this is my failure message……….
+
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded1.png' src="../embedded1.png">
+    </div></div>
+              <div class="step pass-bg" title="cucumber.examples.java.calculator.ScreenShotStepDefinition.visitweb(java.lang.String)">
+                <span>Given Go to https://github.com/</span>
+              </div>
+
+              <div class="step pass-bg" >
+                <span>cucumber.examples.java.calculator.ScreenShotStepDefinition.afterSite(io.cucumber.java.Scenario)</span>
+              </div>
+this is my failure message……….
+
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded2.png' src="../embedded2.png">
+    </div></div>
+              <div class="step pass-bg" >
+                <span>cucumber.examples.java.calculator.RpnCalculatorStepdefs.after(io.cucumber.java.Scenario)</span>
+              </div>
+Runs AFTER scenarios *not* tagged with @foo
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="60"
+          author=""
+          tag="@shop"
+          device="">
+          <div class="status-avatar pass-bg">
+            <i class="fa fa-check text-white"></i>
+          </div>
+          <div class="test-detail">
+            <span class="meta text-white badge badge-sm"></span>
+            <p class="name">Shopping</p>
+            <p class="text-sm"><span>13:33:20 PM</span> / <span>0 secs</span></p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="detail-head">
+              <div class="p-v-10 d-inline-block">
+                <div class="info">
+                  <h5 class="test-status text-pass">Shopping</h5>
+                  <span class='badge badge-success'>06.25.2020 13:33:20</span>
+                  <span class='badge badge-danger'>06.25.2020 13:33:20</span>
+                  <span class='badge badge-default'>0 secs</span>
+                </div>
+                <div class="m-t-15">      <span class="badge badge-pill badge-default"> @shop</span>
+</div>
+              </div>
+            </div>
+
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node"><span class="badge log pass-bg mr-2">Pass</span>Give correct change</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" >
+                <span>cucumber.examples.java.calculator.RpnCalculatorStepdefs.before(io.cucumber.java.Scenario)</span>
+              </div>
+Runs BEFORE scenarios *not* tagged with @foo
+              <div class="step pass-bg" title="cucumber.examples.java.calculator.ShoppingStepdefs.the_following_groceries(java.util.List<cucumber.examples.java.calculator.ShoppingStepdefs$Grocery>)">
+                <span>Given the following groceries:</span>
+              </div>
+<table class='markup-table table '><tr><td>name</td><td>price</td></tr><tr><td>milk</td><td>9</td></tr><tr><td>bread</td><td>7</td></tr><tr><td>soap</td><td>5</td></tr></table>
+              <div class="step pass-bg" title="cucumber.examples.java.calculator.ShoppingStepdefs.i_pay(int)">
+                <span>When I pay 25</span>
+              </div>
+
+              <div class="step pass-bg" title="cucumber.examples.java.calculator.ShoppingStepdefs.my_change_should_be_(int)">
+                <span>Then my change should be 4</span>
+              </div>
+
+              <div class="step pass-bg" >
+                <span>cucumber.examples.java.calculator.RpnCalculatorStepdefs.after(io.cucumber.java.Scenario)</span>
+              </div>
+Runs AFTER scenarios *not* tagged with @foo
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node"><span class="badge log pass-bg mr-2">Pass</span>Doc String to Custom Object</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" >
+                <span>cucumber.examples.java.calculator.RpnCalculatorStepdefs.before(io.cucumber.java.Scenario)</span>
+              </div>
+Runs BEFORE scenarios *not* tagged with @foo
+              <div class="step pass-bg" title="cucumber.examples.java.calculator.ShoppingStepdefs.the_doc_string_is(cucumber.examples.java.calculator.ShoppingStepdefs$Speech)">
+                <span>Given the doc string is</span>
+              </div>
+Hello there how r u?<br /><br />Doing great.<br />Whats new?<br /><br />Nothing much.
+              <div class="step pass-bg" >
+                <span>cucumber.examples.java.calculator.RpnCalculatorStepdefs.after(io.cucumber.java.Scenario)</span>
+              </div>
+Runs AFTER scenarios *not* tagged with @foo
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="71"
+          author=""
+          tag=""
+          device="">
+          <div class="status-avatar skip-bg">
+            <i class="fa fa-long-arrow-right text-white"></i>
+          </div>
+          <div class="test-detail">
+            <span class="meta text-white badge badge-sm"></span>
+            <p class="name">Scenarios With No Step Definitions</p>
+            <p class="text-sm"><span>13:33:20 PM</span> / <span>0 secs</span></p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="detail-head">
+              <div class="p-v-10 d-inline-block">
+                <div class="info">
+                  <h5 class="test-status text-skip">Scenarios With No Step Definitions</h5>
+                  <span class='badge badge-success'>06.25.2020 13:33:20</span>
+                  <span class='badge badge-danger'>06.25.2020 13:33:20</span>
+                  <span class='badge badge-default'>0 secs</span>
+                </div>
+              </div>
+            </div>
+
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node"><span class="badge log skip-bg mr-2">Skip</span>No Step defined</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" >
+                <span>cucumber.examples.java.calculator.RpnCalculatorStepdefs.before(io.cucumber.java.Scenario)</span>
+              </div>
+Runs BEFORE scenarios *not* tagged with @foo
+              <div class="step skip-bg" >
+                <span>Given No step definition methods</span>
+              </div>
+Step undefined
+              <div class="step pass-bg" >
+                <span>cucumber.examples.java.calculator.RpnCalculatorStepdefs.after(io.cucumber.java.Scenario)</span>
+              </div>
+Runs AFTER scenarios *not* tagged with @foo
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="test-content scrollable">
+    <div class="test-content-tools">
+      <ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+    </div>
+    <div class="test-content-detail"><div class="detail-body"></div></div>
+  </div>
+</div><div class="test-wrapper row view category-view attributes-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+      <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Tags</span></a></li></ul>
+      <ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">5</span></a></li></ul>
+    </div>
+    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item">
+          <div class="test-detail">
+            <span class="meta">
+            
+            
+            <span class='badge badge-skip'>1</span>
+            
+            </span>
+            <p class="name">@skipscenario</p>
+            <p class="duration text-sm">1 tests</p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="info">
+              <h4>@skipscenario</h4>
+              
+              
+              <span status="skip" class='badge badge-skip'>1 skipped</span>
+              
+            </div>
+            <table class='table table-sm mt-4'>
+              <thead>
+                <tr>
+                  <th class="status-col">Status</th>
+                  <th class="timestamp-col">Timestamp</th>
+                  <th>TestName</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="tag-test-status" status="skip">
+                  <td><span class="badge log skip-bg">Skip</span></td>
+                  <td>13:33:20 PM</td>
+                  <td>
+                    <a href="#" class="linked" test-id='71'>No Step defined</a>
+                    <div class="">
+                      <span class="badge badge-default">Scenarios With No Step Definitions.No Step defined</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+        <li class="test-item">
+          <div class="test-detail">
+            <span class="meta">
+            <span class='badge badge-success'>1</span>
+            
+            
+            
+            </span>
+            <p class="name">@calc</p>
+            <p class="duration text-sm">1 tests</p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="info">
+              <h4>@calc</h4>
+              <span status="pass" class='badge badge-success'>1 passed</span>
+              
+              
+              
+            </div>
+            <table class='table table-sm mt-4'>
+              <thead>
+                <tr>
+                  <th class="status-col">Status</th>
+                  <th class="timestamp-col">Timestamp</th>
+                  <th>TestName</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="tag-test-status" status="pass">
+                  <td><span class="badge log pass-bg">Pass</span></td>
+                  <td>13:32:47 PM</td>
+                  <td>
+                    <a href="#" class="linked" test-id='43'>Dates with different date formats</a>
+                  </td>
+                </tr>
+                <tr class="tag-test-status" status="pass">
+                  <td><span class="badge log pass-bg">Pass</span></td>
+                  <td>13:32:47 PM</td>
+                  <td>
+                    <a href="#" class="linked" test-id='43'>Determine past date</a>
+                    <div class="">
+                      <span class="badge badge-default">Dates with different date formats.Determine past date</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+        <li class="test-item">
+          <div class="test-detail">
+            <span class="meta">
+            <span class='badge badge-success'>1</span>
+            
+            
+            
+            </span>
+            <p class="name">@shop</p>
+            <p class="duration text-sm">1 tests</p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="info">
+              <h4>@shop</h4>
+              <span status="pass" class='badge badge-success'>1 passed</span>
+              
+              
+              
+            </div>
+            <table class='table table-sm mt-4'>
+              <thead>
+                <tr>
+                  <th class="status-col">Status</th>
+                  <th class="timestamp-col">Timestamp</th>
+                  <th>TestName</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="tag-test-status" status="pass">
+                  <td><span class="badge log pass-bg">Pass</span></td>
+                  <td>13:33:20 PM</td>
+                  <td>
+                    <a href="#" class="linked" test-id='60'>Shopping</a>
+                  </td>
+                </tr>
+                <tr class="tag-test-status" status="pass">
+                  <td><span class="badge log pass-bg">Pass</span></td>
+                  <td>13:33:20 PM</td>
+                  <td>
+                    <a href="#" class="linked" test-id='60'>Give correct change</a>
+                    <div class="">
+                      <span class="badge badge-default">Shopping.Give correct change</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="tag-test-status" status="pass">
+                  <td><span class="badge log pass-bg">Pass</span></td>
+                  <td>13:33:20 PM</td>
+                  <td>
+                    <a href="#" class="linked" test-id='60'>Doc String to Custom Object</a>
+                    <div class="">
+                      <span class="badge badge-default">Shopping.Doc String to Custom Object</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+        <li class="test-item">
+          <div class="test-detail">
+            <span class="meta">
+            <span class='badge badge-success'>1</span>
+            
+            
+            
+            </span>
+            <p class="name">@website</p>
+            <p class="duration text-sm">1 tests</p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="info">
+              <h4>@website</h4>
+              <span status="pass" class='badge badge-success'>1 passed</span>
+              
+              
+              
+            </div>
+            <table class='table table-sm mt-4'>
+              <thead>
+                <tr>
+                  <th class="status-col">Status</th>
+                  <th class="timestamp-col">Timestamp</th>
+                  <th>TestName</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="tag-test-status" status="pass">
+                  <td><span class="badge log pass-bg">Pass</span></td>
+                  <td>13:32:47 PM</td>
+                  <td>
+                    <a href="#" class="linked" test-id='50'>Scenario screenshot</a>
+                    <div class="">
+                      <span class="badge badge-default">Scenarios feature file for screenshot.Scenario screenshot</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+        <li class="test-item">
+          <div class="test-detail">
+            <span class="meta">
+            
+            <span class='badge badge-danger'>1</span>
+            
+            
+            </span>
+            <p class="name">@foo</p>
+            <p class="duration text-sm">1 tests</p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="info">
+              <h4>@foo</h4>
+              
+              <span status="fail" class='badge badge-danger'>1 failed</span>
+              
+              
+            </div>
+            <table class='table table-sm mt-4'>
+              <thead>
+                <tr>
+                  <th class="status-col">Status</th>
+                  <th class="timestamp-col">Timestamp</th>
+                  <th>TestName</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="tag-test-status" status="fail">
+                  <td><span class="badge log fail-bg">Fail</span></td>
+                  <td>13:32:47 PM</td>
+                  <td>
+                    <a href="#" class="linked" test-id='1'>Basic Arithmetic</a>
+                  </td>
+                </tr>
+                <tr class="tag-test-status" status="pass">
+                  <td><span class="badge log pass-bg">Pass</span></td>
+                  <td>13:32:47 PM</td>
+                  <td>
+                    <a href="#" class="linked" test-id='1'>Addition Scenario hehe</a>
+                    <div class="">
+                      <span class="badge badge-default">Basic Arithmetic.Addition Scenario hehe</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="tag-test-status" status="pass">
+                  <td><span class="badge log pass-bg">Pass</span></td>
+                  <td>13:32:47 PM</td>
+                  <td>
+                    <a href="#" class="linked" test-id='1'>Another Addition</a>
+                    <div class="">
+                      <span class="badge badge-default">Basic Arithmetic.Another Addition</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="tag-test-status" status="fail">
+                  <td><span class="badge log fail-bg">Fail</span></td>
+                  <td>13:32:47 PM</td>
+                  <td>
+                    <a href="#" class="linked" test-id='1'>Many additions</a>
+                    <div class="">
+                      <span class="badge badge-default">Basic Arithmetic.Many additions</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="tag-test-status" status="pass">
+                  <td><span class="badge log pass-bg">Pass</span></td>
+                  <td>13:32:47 PM</td>
+                  <td>
+                    <a href="#" class="linked" test-id='1'>Many additions</a>
+                    <div class="">
+                      <span class="badge badge-default">Basic Arithmetic.Many additions</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="tag-test-status" status="pass">
+                  <td><span class="badge log pass-bg">Pass</span></td>
+                  <td>13:32:47 PM</td>
+                  <td>
+                    <a href="#" class="linked" test-id='1'>Many additions</a>
+                    <div class="">
+                      <span class="badge badge-default">Basic Arithmetic.Many additions</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="tag-test-status" status="pass">
+                  <td><span class="badge log pass-bg">Pass</span></td>
+                  <td>13:32:47 PM</td>
+                  <td>
+                    <a href="#" class="linked" test-id='1'>Many additions</a>
+                    <div class="">
+                      <span class="badge badge-default">Basic Arithmetic.Many additions</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="test-content scrollable">
+    <div class="test-content-tools">
+      <ul>
+        <li>
+          <a class="back-to-test" href="javascript:void(0)">
+          <i class="fa fa-arrow-left"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="test-content-detail">
+      <div class="detail-body"></div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid p-4 view dashboard-view">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card"><div class="card-body">
+          <p class="m-b-0">Started</p>
+          <h3>Jun 25, 2020 01:32:46 PM</h3>
+      </div></div>
+    </div>
+    <div class="col-md-3">
+      <div class="card"><div class="card-body">
+          <p class="m-b-0">Ended</p>
+          <h3>Jun 25, 2020 01:33:20 PM</h3>
+      </div></div>
+    </div>
+    <div class="col-md-3">
+      <div class="card"><div class="card-body">
+          <p class="m-b-0 text-pass">Features Passed</p>
+          <h3>3</h3>
+      </div></div>
+    </div>
+    <div class="col-md-3">
+      <div class="card"><div class="card-body">
+          <p class="m-b-0 text-fail">Features Failed</p>
+          <h3>1</h3>
+      </div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <h6 class="card-title">Features</h6>
+        </div>
+        <div class="card-body">
+          <div class="">
+            <canvas id='parent-analysis' width='115' height='90'></canvas>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div><small data-tooltip='60%'>
+            <b>3</b> features passed
+            </small>
+          </div>
+          <div>
+            <small data-tooltip='20%'><b>1</b> features failed, 
+            <b>1</b> skipped, <b data-tooltip='0%'>0</b> others
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <h6 class="card-title">Scenarios</h6>
+        </div>
+        <div class="card-body">
+          <div class="">
+            <canvas id='child-analysis' width='115' height='90'></canvas>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div><small data-tooltip='85%'><b>6</b> scenarios passed</small></div>
+          <div>
+            <small data-tooltip='0%'><b>0</b> scenarios failed, 
+            <b>1</b> skipped, <b data-tooltip='%'>0</b> others
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <h6 class="card-title">Steps</h6>
+        </div>
+        <div class="card-body">
+          <div class="">
+            <canvas id='grandchild-analysis' width='115' height='90'></canvas>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div><small data-tooltip='96%'><b>27</b> steps passed</small></div>
+          <div>
+            <small data-tooltip='0%'><b>0</b> steps failed, 
+            <b>1</b> skipped, <b data-tooltip='%'>0</b> others
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 category-container">
+      <div class="card">
+        <div class="card-header"><p>Tags</p></div>
+        <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+          <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+            <tr>
+              <td>@skipscenario</td>
+              <td>0</td>
+              <td>0</td>
+              <td>1</td>
+              <td>0</td>
+              <td>0%</td>
+            </tr>
+            <tr>
+              <td>@calc</td>
+              <td>1</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>100%</td>
+            </tr>
+            <tr>
+              <td>@shop</td>
+              <td>1</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>100%</td>
+            </tr>
+            <tr>
+              <td>@website</td>
+              <td>1</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>100%</td>
+            </tr>
+            <tr>
+              <td>@foo</td>
+              <td>0</td>
+              <td>1</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0%</td>
+            </tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  var statusGroup = {
+    parentCount: 5,
+    passParent: 3,
+    failParent: 1,
+    warningParent: 0,
+    skipParent: 1,
+    childCount: 5,
+    passChild: 6,
+    failChild: 0,
+    warningChild: 0,
+    skipChild: 1,
+    infoChild: 0,
+    grandChildCount: 5,
+    passGrandChild: 27,
+    failGrandChild: 0,
+    warningGrandChild: 0,
+    skipGrandChild: 1,
+    infoGrandChild: 0,
+    eventsCount: 5,
+  };
+</script>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d095cfb784b9e78ba026995fb276ffa26d6d726d/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

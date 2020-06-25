@@ -27,7 +27,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.aventstack</groupId>
-			<artifactId>extentreports-java</artifactId>
+			<artifactId>extentreports</artifactId>
 			<version>5.0.0-SNAPSHOT</version>
 		</dependency>
 

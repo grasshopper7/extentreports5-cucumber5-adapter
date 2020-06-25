@@ -6,7 +6,7 @@ To build from source use ```install -Dmaven.test.failure.ignore=true``` or ```in
 
 
 
-- Download the extentreports-5.0.0 from above location and install in local repository. ```mvn install:install-file -Dfile=<path to downloaded jar> -DgroupId=com.aventstack -DartifactId=extentreports-java -Dversion=5.0.0-SNAPSHOT -Dpackaging=jar``` OR enable using snapshot versions in pom.xml - https://stackoverflow.com/questions/7715321/how-to-download-snapshot-version-from-maven-snapshot-repository
+- Download the extentreports-5.0.0 from above location and install in local repository. ```mvn install:install-file -Dfile=<path to downloaded jar> -DgroupId=com.aventstack -DartifactId=extentreports-java -Dversion=5.0.0-SNAPSHOT -Dpackaging=jar``` OR enable using snapshot versions in pom.xml - https://stackoverflow.com/questions/7715321/how-to-download-snapshot-version-from-maven-snapshot-repository OR download the ```master``` branch code from https://github.com/extent-framework/extentreports-java and build using ```mvn install```.
 
 - Import the code of this repo and build using - ```install -Dmaven.test.failure.ignore=true``` or ```install -Dmaven.test.skip=true```
 

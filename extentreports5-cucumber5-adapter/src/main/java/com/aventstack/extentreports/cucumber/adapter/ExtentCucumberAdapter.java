@@ -19,11 +19,10 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.GherkinKeyword;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.gherkin.entity.Asterisk;
+import com.aventstack.extentreports.gherkin.model.Asterisk;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.model.Log;
-import com.aventstack.extentreports.model.service.LogService;
-import com.aventstack.extentreports.model.service.TestService;
+import com.aventstack.extentreports.model.Test;
 import com.aventstack.extentreports.service.ExtentService;
 
 import io.cucumber.core.exception.CucumberException;
@@ -233,12 +232,12 @@ public class ExtentCucumberAdapter implements ConcurrentEventListener, StrictAwa
 			}
 
 			if (stepTestThreadLocal.get() != null) {
-				Boolean hasLog = TestService.testHasLog(stepTestThreadLocal.get().getModel());
-				Boolean hasScreenCapture = hasLog && LogService
-						.logHasMedia(stepTestThreadLocal.get().getModel().getLogs().get(0));
-				if (isHookThreadLocal.get() && !hasLog && !hasScreenCapture) {
-					ExtentService.getInstance().removeTest(stepTestThreadLocal.get());
-				}
+			    Test test = stepTestThreadLocal.get().getModel();
+                Boolean hasLog = test.hasLog();
+                Boolean hasScreenCapture = hasLog && test.getLogs().get(0).hasMedia();
+                if (isHookThreadLocal.get() && !hasLog && !hasScreenCapture) {
+                    ExtentService.getInstance().removeTest(stepTestThreadLocal.get());
+                }
 			}
 			break;
 		default:
@@ -330,7 +329,7 @@ public class ExtentCucumberAdapter implements ConcurrentEventListener, StrictAwa
 				return;
 			}
 			ExtentTest t = ExtentService.getInstance().createTest(
-					com.aventstack.extentreports.gherkin.entity.Feature.class, feature.getName(),
+					com.aventstack.extentreports.gherkin.model.Feature.class, feature.getName(),
 					feature.getDescription());
 			featureTestThreadLocal.set(t);
 			featureMap.put(feature.getName(), t);
@@ -377,7 +376,7 @@ public class ExtentCucumberAdapter implements ConcurrentEventListener, StrictAwa
 		}
 		if (scenarioOutlineThreadLocal.get() == null) {
 			ExtentTest t = featureTestThreadLocal.get().createNode(
-					com.aventstack.extentreports.gherkin.entity.ScenarioOutline.class, scenarioOutline.getName(),
+					com.aventstack.extentreports.gherkin.model.ScenarioOutline.class, scenarioOutline.getName(),
 					scenarioOutline.getDescription());
 			scenarioOutlineThreadLocal.set(t);
 			scenarioOutlineMap.put(scenarioOutline.getName(), t);
@@ -453,7 +452,7 @@ public class ExtentCucumberAdapter implements ConcurrentEventListener, StrictAwa
 			ScenarioDefinition scenarioDefinition = TestSourcesModel.getScenarioDefinition(astNode);
 			ExtentTest parent = scenarioOutlineThreadLocal.get() != null ? scenarioOutlineThreadLocal.get()
 					: featureTestThreadLocal.get();
-			ExtentTest t = parent.createNode(com.aventstack.extentreports.gherkin.entity.Scenario.class,
+			ExtentTest t = parent.createNode(com.aventstack.extentreports.gherkin.model.Scenario.class,
 					scenarioDefinition.getName(), scenarioDefinition.getDescription());
 			scenarioThreadLocal.set(t);
 		}

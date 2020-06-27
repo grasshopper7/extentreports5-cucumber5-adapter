@@ -1,7 +1,5 @@
 package com.aventstack.extentreports.service;
 
-import java.io.File;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.Serializable;
 import java.util.Arrays;
@@ -9,7 +7,9 @@ import java.util.Optional;
 import java.util.Properties;
 
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.observer.ExtentObserver;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.ReporterConfigurable;
 
 public class ExtentService implements Serializable {
 
@@ -235,10 +235,10 @@ public class ExtentService implements Serializable {
 		 */
 
 		private static void initSpark(Properties properties) {
-			String out = getOutputPath(properties, OUT_SPARK_KEY);
-			ExtentSparkReporter spark = new ExtentSparkReporter(out);
-			attach(spark, properties, CONFIG_SPARK_KEY);
-		}
+            String out = getOutputPath(properties, OUT_SPARK_KEY);
+            ExtentSparkReporter spark = new ExtentSparkReporter(out);
+            attach(spark, properties, CONFIG_SPARK_KEY);
+        }
 
 		/*
 		 * private static void initTabular(Properties properties) { String out =
@@ -247,16 +247,18 @@ public class ExtentService implements Serializable {
 		 * CONFIG_TABULAR_KEY); }
 		 */
 
-		private static void attach(ExtentSparkReporter r, Properties properties, String configKey) {
-			/*
-			 * Object configPath = properties == null ? System.getProperty(configKey) :
-			 * properties.get(configKey); if (configPath != null &&
-			 * !String.valueOf(configPath).isEmpty()) { File file = new
-			 * File(String.valueOf(configPath)); try { r.loadXMLConfig(file); } catch
-			 * (IOException e) { // TODO Auto-generated catch block e.printStackTrace(); } }
-			 */
-			INSTANCE.attachReporter(r);
-		}
+		private static void attach(ReporterConfigurable r, Properties properties, String configKey) {
+            Object configPath = properties == null
+                    ? System.getProperty(configKey)
+                    : properties.get(configKey);
+            if (configPath != null && !String.valueOf(configPath).isEmpty())
+                try {
+                    r.loadXMLConfig(String.valueOf(configPath));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            INSTANCE.attachReporter((ExtentObserver<?>) r);
+        }
 
 		private static void addSystemInfo(Properties properties) {
 			properties.forEach((k, v) -> {

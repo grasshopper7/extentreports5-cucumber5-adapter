@@ -1,6 +1,6 @@
 This deals with generating Extent reports for Cucumber-JVM version 5 for latest ExtentReports version 5.0.0-SNAPSHOT(https://oss.sonatype.org/content/repositories/snapshots/com/aventstack/extentreports/5.0.0-SNAPSHOT/). This is a protoype attempt and is Work in Progress. 
 
-For generating Extent reports for Cucumber-JVM version 5 and ExtentReports version 4.x.x refer to this [article](http://grasshopper.tech/1697/)
+For generating Extent reports for Cucumber-JVM version 5 and ExtentReports version 4.x.x refer to this [article](http://ghchirp.tech/1697/)
 
 To build from source use ```install -Dmaven.test.failure.ignore=true``` or ```install -Dmaven.test.skip=true```. This ignores intentional test failures from stopping the build.
 
